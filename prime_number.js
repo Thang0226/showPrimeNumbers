@@ -1,16 +1,18 @@
 // Take input from user
-let n;
+let times;
 do {
-  n = prompt("Nhập vào số số nguyên tố muốn in ra:");
-} while (n <= 0);
+  times = +prompt("Nhập vào số số nguyên tố muốn in ra:");
+} while (times <= 0);
 
 // Main function to print n prime numbers
-let N = 2; // Variable to find prime number, starting from 2
-for (let i = 0; i < n; i++) {
-  while (!isPrime(N)) {
-    N++;
+let N = 2;
+let count = 0;
+
+while (count < times) {
+  if (isPrime(N)) {
+    document.write(N + "<br>");
+    count++;
   }
-  document.write(N + "<br>");
   N++;
 }
 
